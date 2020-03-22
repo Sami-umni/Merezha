@@ -14,11 +14,11 @@
 
         <!-- Here we create our GraphArea layout container wrapped into the Zoombox for vast zooming capabilities.
              This is the standard approach for GraphX.-->
-        <controls:ZoomControl x:Name="zoomctrl" Margin="0,0,237,0">
-            <models:GraphAreaExample x:Name="Area" Margin="0,0,-672,-559"/>
+        <controls:ZoomControl x:Name="zoomctrl" Margin="237,0,3,0">
+            <models:GraphAreaExample x:Name="Area" Margin="-383,0,-672,-559"/>
         </controls:ZoomControl>
 
-        <DockPanel LastChildFill="False" Margin="682,6,3,0">
+        <DockPanel LastChildFill="False" Margin="0,6,682,0">
             <StackPanel Orientation="Vertical" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="224" >
                 <Button Height="35" Margin="3" x:Name="btnOpenFile" Click="btnOpenFile_Click" Content="Відкрити файл"/>
                 <Button Height="35" Margin="3" Name="gg_but_randomgraph"  DockPanel.Dock="Right" UseLayoutRounding="True">
@@ -44,8 +44,8 @@
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Width="234" RenderTransformOrigin="0.927,0.464" Margin="-234,0,0,0" Height="62" >
-                <Button Margin="3,14,3,0" x:Name="AboutProgram" Click="AboutProgram_Click" Width="230" Content="Про програму"/>
-            </StackPanel>
+				<Button Margin="3,14,3,0" x:Name="AboutProgram" Click="AboutProgram_Click" Width="230" Content="Про програму"/>
+			</StackPanel>
         </DockPanel>
     </Grid>
 </Window>
