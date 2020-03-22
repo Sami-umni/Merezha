@@ -222,7 +222,7 @@ namespace Merezha
             {
                 string LineRezult = "";
                 DataVertex tmp = AftMinti.Vertex[i].vert;
-                tbSettingText.AppendText(string.Format("L = {0} Path: ", AftMinti.Vertex[i].dist));
+                tbSettingText.AppendText(string.Format("H = {0} Дуга: ", AftMinti.Vertex[i].dist));
                 
                 while (!(tmp == AftMinti.Vertex[0].vert)) {
                     foreach (DataEdgeMinti j in AftMinti.Edges)

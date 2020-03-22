@@ -34,7 +34,7 @@
 				<Button Height="20" Margin="0,3,3,3" x:Name="Save" Click="save_btn" Width="227" Content="Зберегти у файл"/>
 				<Button Height="29" Margin="0,3,3,3" x:Name="Search_The_Way" Click="Search_The_Way_Click" Width="228" Content="Пошук шляхів"/>
 				<TextBox x:Name="tbSettingText" Margin="0,3,3,3" Width="224" TextWrapping="Wrap" IsReadOnly ="True" VerticalScrollBarVisibility="Auto"
-                	HorizontalScrollBarVisibility="Auto" Height="198" Text="Список шляхів та відстаней від джерела:"/>
+                	HorizontalScrollBarVisibility="Auto" Height="198" Text="Список шляхів та відстаней:"/>
 				<Button Margin="0,3,3,3" x:Name="AboutProgram" Click="AboutProgram_Click" Width="230" Content="Про авторів" Height="32"/>
 			</StackPanel>
 		</DockPanel>
