@@ -19,11 +19,8 @@ namespace Merezha
     /// </summary>
     public partial class MainWindow : Window, IDisposable
     {
-
         List<int[]> matrix = new List<int[]>();
-        int numOfVertices = 0;
-
-        
+        int numOfVertices = 0;        
 
         public MainWindow()
         {
@@ -217,6 +214,8 @@ namespace Merezha
         {
             Method_Minti Method = new Method_Minti(GraphExample_Setup(), matrix);
             GraphExMinti AftMinti = Method.find_the_way();
+            tbSettingText.Clear();
+            tbSettingText.AppendText("Список шляхів та відстаней:");
             tbSettingText.AppendText(Environment.NewLine);
             for (int i = 1; i < numOfVertices; i++)
             {
@@ -287,7 +286,7 @@ namespace Merezha
 
         private void AboutProgram_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Автори:\n-> Івасюта Павло\n-> Костюк Віталій\n-> Дубець Василь\n->Георгіян Євген\n-> Козуб Микола\n" + "Викладач:\n Руснак Микола Андрійович\nЧНУ 2020", "Програма розроблена:" );
+            MessageBox.Show("Автори:\n-> Івасюта Павло\n-> Костюк Віталій\n-> Дубець Василь\n-> Георгіян Євген\n-> Козуб Микола\n\n" + "Викладач:\n-> Руснак Микола Андрійович\n\nЧНУ 2020", "Програма розроблена:" );
         }
 
         private void textBox_GotFocus(object sender, RoutedEventArgs e)
