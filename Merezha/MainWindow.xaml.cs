@@ -74,6 +74,8 @@ namespace Merezha
             zoomctrl.ZoomToFill();
         }
 
+
+
         void gg_but_randomgraph_Click(object sender, RoutedEventArgs e)
         {
             //Lets generate configured graph using pre-created data graph assigned to LogicCore object.
@@ -285,7 +287,21 @@ namespace Merezha
 
         private void AboutProgram_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Автори:\nКніжницький Євгеній та Андрійчук Андрій\n" + "Викладач:\n Руснак Микола Андрійович\nЧНУ 2019", "Програма розроблена:" );
+            MessageBox.Show("Автори:\n-> Івасюта Павло\n-> Костюк Віталій\n-> Дубець Василь\n->Георгіян Євген\n-> Козуб Микола\n" + "Викладач:\n Руснак Микола Андрійович\nЧНУ 2020", "Програма розроблена:" );
+        }
+
+        private void textBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox.Text == "Vert1 Vert2 Distance")
+            {
+                textBox.Text = "";
+            }
+        }
+
+        private void textBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+                textBox.Text = "Vert1 Vert2 Distance";
         }
     }
 }

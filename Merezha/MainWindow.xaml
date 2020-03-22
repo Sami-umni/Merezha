@@ -6,46 +6,37 @@
         xmlns:controls="http://schemas.panthernet.ru/graphx/"
         xmlns:models="clr-namespace:Merezha.Moduls"
         Title="Мережі та потоки. Метод Мінті." Height="600" Width="927.487" MaxHeight="700" MaxWidth="1000" MinHeight="550" MinWidth="900">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
 
-        <!-- Here we create our GraphArea layout container wrapped into the Zoombox for vast zooming capabilities.
+		<!-- Here we create our GraphArea layout container wrapped into the Zoombox for vast zooming capabilities.
              This is the standard approach for GraphX.-->
-        <controls:ZoomControl x:Name="zoomctrl" Margin="237,0,3,0">
-            <models:GraphAreaExample x:Name="Area" Margin="-383,0,-672,-559"/>
-        </controls:ZoomControl>
+		<controls:ZoomControl x:Name="zoomctrl" Margin="237,0,3,0">
+			<models:GraphAreaExample x:Name="Area" Margin="-383,0,-672,-559"/>
+		</controls:ZoomControl>
 
-        <DockPanel LastChildFill="False" Margin="0,6,682,0">
-            <StackPanel Orientation="Vertical" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="224" >
-                <Button Height="35" Margin="3" x:Name="btnOpenFile" Click="btnOpenFile_Click" Content="Відкрити файл"/>
-                <Button Height="35" Margin="3" Name="gg_but_randomgraph"  DockPanel.Dock="Right" UseLayoutRounding="True">
-                    Побудувати граф
-                </Button>
-                <Button Height="35" Margin="3" Name="gg_but_relayout" DockPanel.Dock="Right" UseLayoutRounding="True">
-                    Алгоритм вирівнювання
-                </Button>
-            </StackPanel>
-            <StackPanel Orientation="Vertical" DockPanel.Dock="Top" HorizontalAlignment="Stretch" Height="125" >
-                <Button Height="62" Margin="4,4,3,4" x:Name="Add" Click="Add_new_vertex_and_edge" Width="227" Content="Додати вершини та дугу (ребро)"/>
-                <TextBox x:Name="textBox" TextWrapping="Wrap" Margin="10,0" Height="25" FontSize="12">
-                    [Вершина 1]-[Вершина2] [Відстань]
-                </TextBox>
-                
-                <Button Height="20" Margin="4,4,3,4" x:Name="Save" Click="save_btn" Width="227" Content="Зберегти у файл"/>
-            </StackPanel>
-
-            <StackPanel Orientation="Vertical"  HorizontalAlignment="Stretch" Margin="0,22,0,51" RenderTransformOrigin="0.5,0.798" >
-                <Button Height="29" Margin="3" x:Name="Search_The_Way" Click="Search_The_Way_Click" Width="228" Content="Пошук шляхів"/>
-                <TextBox x:Name="tbSettingText" Margin="2,0" Width="224" TextWrapping="Wrap" IsReadOnly ="True" VerticalScrollBarVisibility="Auto"
+		<DockPanel LastChildFill="False" Margin="0,6,672,0">
+			<StackPanel Orientation="Vertical" DockPanel.Dock="Top" HorizontalAlignment="Right" Width="232" Height="550" Margin="0,5,5,0" >
+				<Button Height="35" Margin="0,3,3,3" x:Name="btnOpenFile" Click="btnOpenFile_Click" Content="Відкрити файл"/>
+				<Button Height="35" Margin="0,3,3,3" Name="gg_but_randomgraph"  DockPanel.Dock="Right" UseLayoutRounding="True">
+					Побудувати граф
+				</Button>
+				<Button Height="35" Margin="0,3,3,3" Name="gg_but_relayout" DockPanel.Dock="Right" UseLayoutRounding="True">
+					Алгоритм вирівнювання
+				</Button>
+				<Button Height="62" Margin="0,3,3,3" x:Name="Add" Click="Add_new_vertex_and_edge" Content="Додати вершини та дугу (ребро)"/>
+				<TextBox x:Name="textBox" TextWrapping="Wrap" Margin="0,3,3,3" Height="25" FontSize="12" GotFocus="textBox_GotFocus" LostFocus="textBox_LostFocus" RenderTransformOrigin="0.479,0.462" TextAlignment="Center" >
+					Vert1 Vert2 Distance
+				</TextBox>
+				<Button Height="20" Margin="0,3,3,3" x:Name="Save" Click="save_btn" Width="227" Content="Зберегти у файл"/>
+				<Button Height="29" Margin="0,3,3,3" x:Name="Search_The_Way" Click="Search_The_Way_Click" Width="228" Content="Пошук шляхів"/>
+				<TextBox x:Name="tbSettingText" Margin="0,3,3,3" Width="224" TextWrapping="Wrap" IsReadOnly ="True" VerticalScrollBarVisibility="Auto"
                 	HorizontalScrollBarVisibility="Auto" Height="198" Text="Список шляхів та відстаней від джерела:"/>
-
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Width="234" RenderTransformOrigin="0.927,0.464" Margin="-234,0,0,0" Height="62" >
-				<Button Margin="3,14,3,0" x:Name="AboutProgram" Click="AboutProgram_Click" Width="230" Content="Про програму"/>
+				<Button Margin="0,3,3,3" x:Name="AboutProgram" Click="AboutProgram_Click" Width="230" Content="Про авторів" Height="32"/>
 			</StackPanel>
-        </DockPanel>
-    </Grid>
+		</DockPanel>
+	</Grid>
 </Window>
