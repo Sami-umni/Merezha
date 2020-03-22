@@ -37,7 +37,7 @@ namespace Merezha
             
             GraphAreaExample_Setup();
             gg_but_randomgraph.Click += gg_but_randomgraph_Click;
-            gg_but_relayout.Click += gg_but_relayout_Click;
+            //gg_but_relayout.Click += gg_but_relayout_Click;
 
             Loaded += MainWindow_Loaded;
         }

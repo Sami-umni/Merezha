@@ -42,14 +42,14 @@
 						</LinearGradientBrush>
 					</Button.Background>
 				</Button>
-				<Button Height="35" Width="225" Margin="0,3,3,3" Name="gg_but_relayout" DockPanel.Dock="Right" UseLayoutRounding="True" Content="Алгоритм вирівнювання" Foreground="#FFF3F3F3" Opacity="0.995" BorderThickness="5,1" BorderBrush="#FF001C9C">
+				<!--<Button Height="35" Width="225" Margin="0,3,3,3" Name="gg_but_relayout" DockPanel.Dock="Right" UseLayoutRounding="True" Content="Алгоритм вирівнювання" Foreground="#FFF3F3F3" Opacity="0.995" BorderThickness="5,1" BorderBrush="#FF001C9C">
 					<Button.Background>
 						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 							<GradientStop Color="Black" Offset="0"/>
 							<GradientStop Color="#FF373A8A" Offset="1"/>
 						</LinearGradientBrush>
 					</Button.Background>
-				</Button>
+				</Button>-->
 				<Button Height="62" Width="225" Margin="0,3,3,3" x:Name="Add" Click="Add_new_vertex_and_edge" Content="Додати вершини та дугу (ребро)" Foreground="#FFF3F3F3" Opacity="0.995" BorderThickness="5,1" BorderBrush="#FF001C9C">
 					<Button.Background>
 						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
