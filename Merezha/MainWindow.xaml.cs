@@ -233,9 +233,20 @@ namespace Merezha
                     {
                         if (j.Edges.Target == tmp && j.Label)
                         {
-                            LineRezult += tmp.Text + "-";                            
-                            tmp = j.Edges.Source;
-                            break;
+                            if (tmp.Text.Length > 1)
+                            {
+                                char[] str = tmp.Text.ToCharArray();
+                                Array.Reverse(str);
+                                LineRezult += new string(str) + "-";
+                                tmp = j.Edges.Source;
+                                break;
+                            }
+                            else
+                            {
+                                LineRezult += tmp.Text + "-";
+                                tmp = j.Edges.Source;
+                                break;
+                            }
                         }
                     }
                     
@@ -249,6 +260,7 @@ namespace Merezha
             }
         }
 
+      
         private void Add_new_vertex_and_edge(object sender, RoutedEventArgs e)
         {
             try
@@ -291,7 +303,20 @@ namespace Merezha
 
         private void AboutProgram_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Автори:\n-> Івасюта Павло\n-> Костюк Віталій\n-> Дубець Василь\n-> Георгіян Євген\n-> Козуб Микола\n\n" + "Викладач:\n-> Руснак Микола Андрійович\n\nЧНУ 2020", "Програма розроблена:" );
+            MessageBox.Show("Чернівецький національний університет імені Юрія Федьковича\n" +
+                "\tІнститут фізико-технічних та комп'ютерних наук\n" +
+                "   Кафедра математичних проблем управління і кібернетики\n" +
+                "\nАвтори:\n" +
+                "\t-> Івасюта Павло\n" +
+                "\t-> Костюк Віталій\n" +
+                "\t-> Дубець Василь\n" +
+                "\t-> Георгіян Євген\n" +
+                "\t-> Козуб Микола\n\n" + 
+                "\nВикладач:\n" +
+                "\t-> Руснак Микола Андрійович\n\n" +
+                "\n\t\t\t     2020 рік", 
+
+                "Про програму" );
         }
 
         private void textBox_GotFocus(object sender, RoutedEventArgs e)
