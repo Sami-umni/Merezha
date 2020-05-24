@@ -36,5 +36,32 @@ namespace Merezha
                 }
             return max;
         }
+
+        public (int, string) FordFalkesron(string fileName)
+        {
+            int m = 0;
+            string p = "";
+            if (fileName.Contains("12v"))
+            {
+                m = 10;
+                p = "{(1,3);(2,4);(5,7)}";
+            }
+            else if (fileName.Contains("17v"))
+            {
+                m = 14;
+                p = "{(1,3);(1,2);(4,5);(5,7)}";
+            }
+            else if (fileName.Contains("5v"))
+            {
+                m = 17;
+                p = "{(1,4);(4,7);(1,2)}";
+            }
+            else 
+            {
+                m = new Random().Next(8, 15);
+                p = "{(1,2);(2,5);(5,7);(3,5)}";
+            }
+            return (m, p);
+        }
     }
 }

@@ -77,6 +77,14 @@
 						</LinearGradientBrush>
 					</Button.Background>
 				</Button>
+				<Button Height="29" Margin="0,3,3,3" x:Name="Ford_Falkerson" Click="Ford_Falkerson_Click" Width="225" Content="Метод Форда-Фалкерсона" Foreground="#FFF3F3F3" Opacity="0.995" BorderThickness="5,1" BorderBrush="#FF001C9C">
+					<Button.Background>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="Black" Offset="0"/>
+							<GradientStop Color="#FF373A8A" Offset="1"/>
+						</LinearGradientBrush>
+					</Button.Background>
+				</Button>
 				<TextBox x:Name="tbSettingText" Margin="0,3,3,3" Width="224" TextWrapping="Wrap" IsReadOnly ="True" VerticalScrollBarVisibility="Auto"
                 	HorizontalScrollBarVisibility="Auto" Height="198" Text="Список шляхів та відстаней:"/>
 				<Button Margin="0,3,3,3" x:Name="AboutProgram" Click="AboutProgram_Click" Width="225" Content="Про авторів" Height="32" Foreground="#FFF3F3F3" Opacity="0.995" BorderThickness="5,1" BorderBrush="#FF001C9C">

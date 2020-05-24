@@ -20,7 +20,10 @@ namespace Merezha
     public partial class MainWindow : Window, IDisposable
     {
         List<int[]> matrix = new List<int[]>();
-        int numOfVertices = 0;        
+        int numOfVertices = 0;
+        string minPereriz = "";
+        int maxPotik = 0;
+
 
         public MainWindow()
         {
@@ -55,7 +58,9 @@ namespace Merezha
             openFileDialog.Filter =  "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
-                matrix = new Reading().ReadFile(openFileDialog.FileName);
+                var readingService = new Reading();
+                matrix = readingService.ReadFile(openFileDialog.FileName);
+                (maxPotik, minPereriz) = readingService.FordFalkesron(openFileDialog.FileName);
             }
             numOfVertices = new Reading().MaxValue(matrix);
             GraphAreaExample_Setup();
@@ -301,6 +306,12 @@ namespace Merezha
         {
             if (string.IsNullOrWhiteSpace(textBox.Text))
                 textBox.Text = "Vert1 Vert2 Distance";
+        }
+
+        private void Ford_Falkerson_Click(object sender, RoutedEventArgs e)
+        {
+            tbSettingText.Clear();
+            tbSettingText.AppendText($"Максимальний потік: {maxPotik} \nМінімальний розріз: {minPereriz}");
         }
     }
 }
